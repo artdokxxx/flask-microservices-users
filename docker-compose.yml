@@ -1,0 +1,11 @@
+version: '2.1'
+
+services:
+
+  users-service:
+    container_name: users-service
+    build: .
+    ports:
+      - 80:5000 # HOST:CONTAINER
+    environment:
+      - APP_SETTINGS=project.config.DevelopmentConfig
