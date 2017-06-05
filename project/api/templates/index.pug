@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="description", content="")
+        meta(name="author", content="")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+
+        title API - Get users
+        link(href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+    body
+      div.container
+        div.row
+          div.col-md-4
+            br
+            h1 All Users
+            hr
+            br
+            form(action="/", method="POST")
+              div.from-group
+                input(name='username', type="text", placeholder="Enter a username", required="required").form-control.input-lg
+              div.from-group
+                input(name='email', type="email", placeholder="Enter an email address", required="required").form-control.input-lg
+              input(type="submit", value="Submit").btn.btn-primary.btn-lg.btn-block
+            br
+            hr
+            div
+              if users
+                for user in users
+                  h4.well
+                    strong= user.username
+              else
+                p No users!
+      script(src="https://code.jquery.com/jquery-2.2.4.min.js", integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=", crossorigin="anonymous")

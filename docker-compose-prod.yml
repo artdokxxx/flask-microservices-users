@@ -19,8 +19,8 @@ services:
     expose:
       - "5000"
     environment:
-      - APP_SETTINGS=project.config.DevelopmentConfig
-      - DATABASE_URL=postgres://postgres:postgres@users-db:5432/users_dev
+      - APP_SETTINGS=project.config.ProductionConfig
+      - DATABASE_URL=postgres://postgres:postgres@users-db:5432/users_prod
       - DATABASE_TEST_URL=postgres://postgres:postgres@users-db:5432/users_test
     depends_on:
       users-db:
@@ -41,4 +41,3 @@ services:
       - users-service
     healthcheck:
       test: ['CMD', "curl", "-f", "http://localhost"]
-      interval: 1m30s
