@@ -30,13 +30,13 @@ $ docker-compose up -d
 Create db:
 
 ```sh
-$ docker-compose run names-service python manage.py recreate_db
+$ docker-compose run users-service python manage.py recreate_db
 ```
 
 Seed:
 
 ```sh
-$ docker-compose run names-service python manage.py seed_db
+$ docker-compose run users-service python manage.py seed_db
 ```
 
 ### Commands
@@ -44,7 +44,7 @@ $ docker-compose run names-service python manage.py seed_db
 Run tests:
 
 ```sh
-$ docker-compose run names-service python manage.py test
+$ docker-compose run users-service python manage.py test
 ```
 
 To stop the containers:
