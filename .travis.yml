@@ -7,7 +7,7 @@ service:
   - postgresql
 
 install:
-  - pip install -r -requirements.txt
+  - pip install -r requirements.txt
 
 before_script:
   - export APP_SETTINGS="project.config.TestingConfig"
